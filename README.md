@@ -15,16 +15,25 @@ This repository aims to compare the performance of these two methods in modeling
 
 A damped vibration system is a mechanical system in which oscillatory motion gradually decreases over time due to energy dissipation mechanisms such as friction or viscous damping. Unlike undamped systems that oscillate indefinitely, damped systems experience a reduction in amplitude until the motion eventually ceases.
 
-* *Equation of Motion*: The equation of motion for a single-degree-of-freedom (SDOF) damped vibration system is given by:
-$$ m \ddot{y}(t) + b \dot{y}(t) + k y(t) = 0 $$
-* *Analytic Solution*: The analytic solution of damped vibration system for every position (y) is given by:
-$$ y(t) = y_0 e^{-\gamma t} \cos{(\omega_d t)} $$
+### $\text{1. Physics-Informed Neural Networks (PINNs)}$
 
-Where: 
-### $\text{2. Physics-Informed Neural Networks (PINNs)}$
+* The neural network is trained by considering the governing differential equations of the system and Initial and/or boundary conditions,
+* The loss function includes the residuals of the physical equations,
+* Used to predict the system response over time.
 
-### $\text{3. 4th Order Runge-Kutta (RK4)}$
+### $\text{2. 4th Order Runge-Kutta (RK4)}$
 
-## $\text{Hasil dan Evaluasi}$
+* An explicit fourth-order numerical method,
+* Used as a deterministic approach to solve ordinary differential equations,
+* The results are compared with the exact solution.
 
-## $\text{Visualisasi Hasil}$
+## $\text{Results and Evaluation}$
+
+The evaluation is performed using the *Mean Squared Error (MSE)* with respect to the exact solution.
+
+| Method |   MSE (%)  |
+|--------|------------|
+| PINNs  |  *0.1636*  |
+| RK4    |  *0.1453*  |
+
+Based on these results RK4 produces a slightly lower error compared to PINNs and PINNs still demonstrate competitive performance despite being a machine learning–based approach.
