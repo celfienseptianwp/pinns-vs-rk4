@@ -1,39 +1,45 @@
-# $\text{Physics-Informed Neural Networks vs Runge-Kutta}$ 
+# $\text{PINNs vs. RK4}$
 
-This repository discusses a comparison between two physics-based modeling methods, namely *Physics-Informed Neural Networks* (PINNs) and the *fourth-order Runge–Kutta method* (RK4). To evaluate both methods, a *damped vibration system* is used as the case study, with the objective of analyzing the prediction accuracy of each method with respect to the exact solution.
+Comparing the **Physics-Informed Neural Networks (PINNs)** method and the **fourth-order Runge–Kutta (RK4)** method to estimate damped oscillatory motion based on **Mean Squared Error (MSE)**.
 
-## $\text{Background}$
+## $\text{Purpose}$
+- Studying the **PINNs** and **RK4** methods in estimating damped oscillatory motion
+- Comparing the accuracy of the **PINNs** and **RK4** methods
 
-Modeling physical systems can be performed using classical numerical approaches as well as machine learning–based approaches:
+## $\text{Installation}$ 
+Clone repository with
+`git clone https://github.com/celfienseptianwp/pinns-vs-rk4.git` and use `pip install -r requirements.txt` in terminal to install dependencies. 
 
-* *Fourth-Order Runge–Kutta* (RK4) is a numerical method commonly used to solve ordinary differential equations.
-* *Physics-Informed Neural Networks* (PINNs) are neural network–based approaches that incorporate physical laws into the training process.
+## $\text{Result}$
+![Damped Oscillation using PINNs](assets/PINNs.png)
+![Damped Oscillation using RK4](assets/RK4.png)
 
-This repository aims to compare the performance of these two methods in modeling a damped vibration system.
+The following table presents a comparison of **Mean Squared Error (MSE)** accuracy between the **Physics-Informed Neural Networks (PINNs)** method and the **RK4** method:
+| Method | MSE (%) |
+|---------|----------|
+| PINNs | 0.1636 |
+| RK4 | 0.1453 |
 
-## $\text{Methodology}$
+From these results, it can be observed that **RK4** achieves higher accuracy compared to **PINNs**.
 
-A damped vibration system is a mechanical system in which oscillatory motion gradually decreases over time due to energy dissipation mechanisms such as friction or viscous damping. Unlike undamped systems that oscillate indefinitely, damped systems experience a reduction in amplitude until the motion eventually ceases.
+## $\text{Folder Structure}$
+```text
+├── assets/
+│   ├── PINNs.png
+│   └── RK4.png
+├── pinns.ipynb
+├── README.md
+├── requirements.txt
+└── rk4.ipynb
+```
 
-### $\text{1. Physics-Informed Neural Networks (PINNs)}$
+## $\text{References}$
+- Thuerey, N., Holzschuh, B., Holl, P., Kohl, G., Lino, M., Liu, Q., Schnell, P., & Trost, F. (2021–2025). Integrating DP into NN Training. In Physics-based Deep Learning: Differentiable Physics Examples. Physics-based Deep Learning. Retrieved from https://physicsbaseddeeplearning.org/diffphys-examples.html
+- Runge-Kutta: SHORT Explanation + Python script [Video]. (2022, June 7). YouTube. https://youtu.be/C_WsQeOjbV4
 
-* The neural network is trained by considering the governing differential equations of the system and Initial and/or boundary conditions,
-* The loss function includes the residuals of the physical equations,
-* Used to predict the system response over time.
+## $\text{Licence}$
+This project uses the MIT License.
 
-### $\text{2. 4th Order Runge-Kutta (RK4)}$
+![Python](https://img.shields.io/badge/python-3.10-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-* An explicit fourth-order numerical method,
-* Used as a deterministic approach to solve ordinary differential equations,
-* The results are compared with the exact solution.
-
-## $\text{Results and Evaluation}$
-
-The evaluation is performed using the *Mean Squared Error (MSE)* with respect to the exact solution.
-
-| Method |   MSE (%)  |
-|--------|------------|
-| PINNs  |  *0.1636*  |
-| RK4    |  *0.1453*  |
-
-Based on these results RK4 produces a slightly lower error compared to PINNs and PINNs still demonstrate competitive performance despite being a machine learning–based approach.
