@@ -11,8 +11,10 @@ Clone repository with
 `git clone https://github.com/celfienseptianwp/pinns-vs-rk4.git` and use `pip install -r requirements.txt` in terminal to install dependencies. 
 
 ## $\text{Result}$
-![Damped Oscillation using PINNs](assets/PINNs.png)
-![Damped Oscillation using RK4](assets/RK4.png)
+<p align="center">
+  <img src="assets/PINNs.png" width="200">
+  <img src="assets/RK4.png" width="203">
+</p>
 
 The following table presents a comparison of **Mean Squared Error (MSE)** accuracy between the **Physics-Informed Neural Networks (PINNs)** method and the **RK4** method:
 | Method | MSE (%) |
