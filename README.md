@@ -12,8 +12,8 @@ Clone repository with
 
 ## $\text{Result}$
 <p align="center">
-  <img src="assets/PINNs.png" width="250">
-  <img src="assets/RK4.png" width="253">
+  <img src="assets/PINNs.png" width="275">
+  <img src="assets/RK4.png" width="278">
 </p>
 
 The following table presents a comparison of **Mean Squared Error (MSE)** accuracy between the **Physics-Informed Neural Networks (PINNs)** method and the **RK4** method:
