@@ -1,5 +1,8 @@
 # $\text{PINNs vs. RK4}$
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red?logo=pytorch)
+
 Comparing the **Physics-Informed Neural Networks (PINNs)** method and the **fourth-order Runge–Kutta (RK4)** method to estimate damped oscillatory motion based on **Mean Squared Error (MSE)**.
 
 ## $\text{Purpose}$
@@ -38,10 +41,3 @@ From these results, it can be observed that **RK4** achieves higher accuracy com
 ## $\text{References}$
 - Thuerey, N., Holzschuh, B., Holl, P., Kohl, G., Lino, M., Liu, Q., Schnell, P., & Trost, F. (2021–2025). Integrating DP into NN Training. In Physics-based Deep Learning: Differentiable Physics Examples. Physics-based Deep Learning. Retrieved from https://physicsbaseddeeplearning.org/diffphys-examples.html
 - Runge-Kutta: SHORT Explanation + Python script [Video]. (2022, June 7). YouTube. https://youtu.be/C_WsQeOjbV4
-
-## $\text{Licence}$
-This project uses the MIT License.
-
-![Python](https://img.shields.io/badge/python-3.10-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-
